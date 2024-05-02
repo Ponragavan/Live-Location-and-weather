@@ -50,7 +50,7 @@ export default function App() {
       try {
         // Find weather conditions using openweather map api key
         const response = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=6c665d7dd748d6ef6ded9d9fd6c915e1&units=metric`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_OPENWEATHERMAP_API_KEY&units=metric`
         );
         const data = await response.json();
         console.log(data);
