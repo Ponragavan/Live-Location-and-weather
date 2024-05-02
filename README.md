@@ -1,8 +1,31 @@
-# React + Vite
+# Programming - ChatBOT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About 
 
-Currently, two official plugins are available:
+  This is the react-vite project:  A weather app that utilizes Geolocation API for live location tracking and OpenWeatherMap API for real-time weather data. Users can instantly view current weather conditions based on their location, providing accurate forecasts on-the-go.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
+
+  [Click Here]([https://programming-chatbot.netlify.app/](https://trackinglocationandweather.netlify.app/))
+
+## Installation
+
+To run this project locally, run the follwing code on your command prompt:
+
+1.Clone the repository:
+
+```bash
+git clone https://github.com/Ponragavan/Live-Location-and-weather.git
+```
+
+2.Install dependencies:
+
+```bash
+npm install
+```
+
+3.To run:
+
+```bash
+npm run dev
+```
