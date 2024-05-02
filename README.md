@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-  [Click Here]([https://programming-chatbot.netlify.app/](https://trackinglocationandweather.netlify.app/))
+  [Click Here](https://trackinglocationandweather.netlify.app/)
 
 ## Installation
 
