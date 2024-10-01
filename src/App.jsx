@@ -50,7 +50,7 @@ export default function App() {
       try {
         // Find weather conditions using openweather map api key
         const response = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_OPENWEATHERMAP_API_KEY&units=metric`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_API_KEY}&units=metric`
         );
         const data = await response.json();
         console.log(data);
@@ -73,9 +73,9 @@ export default function App() {
   }
   return (
     <>
-      <header className="w-full h-14 bg-cover bg-top flex justify-center">
+      <header className="flex justify-center w-full bg-top bg-cover h-14">
         <img src={icon} alt="The Icon" className="h-12 pt-2 mr-5" />
-        <h2 className="pt-4 uppercase text-lg max-md:text-md font-bold bg-gradient-to-r from-red-400 to-pink-700 text-transparent bg-clip-text">
+        <h2 className="pt-4 text-lg font-bold text-transparent uppercase max-md:text-md bg-gradient-to-r from-red-400 to-pink-700 bg-clip-text">
           Track User's Location
         </h2>
       </header>
@@ -85,25 +85,25 @@ export default function App() {
             <img
               src={logo}
               alt="The Logo"
-              className="h-24 w-32 max-md:h-16 max-md:w-20 my-5"
+              className="w-32 h-24 my-5 max-md:h-16 max-md:w-20"
             />
-            <h3 className="text-2xl uppercase font-bold bg-gradient-to-r from-teal-500 via-emerald-300 to-green-200 text-transparent bg-clip-text">
+            <h3 className="text-2xl font-bold text-transparent uppercase bg-gradient-to-r from-teal-500 via-emerald-300 to-green-200 bg-clip-text">
               Locate ME
             </h3>
-            <p className="text-xl text-red-300 text-center m-6 max-md:text-base max-md:m-4">
+            <p className="m-6 text-xl text-center text-red-300 max-md:text-base max-md:m-4">
               A user-friendly app enabling location tracking. Discover your
               current location and weather conditions with ease. Simple
               andintuitive.
             </p>
             <button
-              className="h-20 max-md:h-16 w-3/4 flex gap-4 justify-center items-center bg-gradient-to-bl from-yellow-300 via-amber-500 to-orange-700 rounded-2xl max-md:rounded-xl text-xl transition duration-300 ease-in hover:scale-105 active:scale-105"
+              className="flex items-center justify-center w-3/4 h-20 gap-4 text-xl transition duration-300 ease-in max-md:h-16 bg-gradient-to-bl from-yellow-300 via-amber-500 to-orange-700 rounded-2xl max-md:rounded-xl hover:scale-105 active:scale-105"
               onClick={obtainLocation}
             >
               <p className="max-md:text-base">Obtain Location</p>
               <img
                 src={btn}
                 alt="Button Icon"
-                className="h-16 w-16 max-md:h-12 max-md:w-12"
+                className="w-16 h-16 max-md:h-12 max-md:w-12"
               />
             </button>
           </Card>
@@ -113,25 +113,25 @@ export default function App() {
             <img
               src={logo}
               alt="The Logo"
-              className="h-24 w-32 max-md:h-16 max-md:w-20 my-5"
+              className="w-32 h-24 my-5 max-md:h-16 max-md:w-20"
             />
-            <h3 className="text-2xl uppercase font-bold bg-gradient-to-r from-teal-500 via-emerald-300 to-green-200 text-transparent bg-clip-text">
+            <h3 className="text-2xl font-bold text-transparent uppercase bg-gradient-to-r from-teal-500 via-emerald-300 to-green-200 bg-clip-text">
               location & weather
             </h3>
-            <p className="text-xl text-red-300 text-center m-4 max-md:text-base max-md:m-2">
+            <p className="m-4 text-xl text-center text-red-300 max-md:text-base max-md:m-2">
               {content}
             </p>
             <Weather weatherData={weatherData} />
             {!error ? (
               <button
-                className="h-16 max-lg:h-12 max-md:text-sm w-1/3 max-md:w-1/2 bg-orange-500 text-lg rounded-lg px-6 py-4 my-6 duration-300 ease-in hover:scale-105 active:scale-105"
+                className="w-1/3 h-16 px-6 py-4 my-6 text-lg duration-300 ease-in bg-orange-500 rounded-lg max-lg:h-12 max-md:text-sm max-md:w-1/2 hover:scale-105 active:scale-105"
                 onClick={resetHome}
               >
                 Back to home
               </button>
             ) : (
               <button
-                className="h-16 max-lg:h-12 max-md:text-sm w-1/3 max-md:w-1/2 bg-red-500 text-lg rounded-lg px-6 py-4 my-6 duration-300 ease-in hover:scale-105 active:scale-105"
+                className="w-1/3 h-16 px-6 py-4 my-6 text-lg duration-300 ease-in bg-red-500 rounded-lg max-lg:h-12 max-md:text-sm max-md:w-1/2 hover:scale-105 active:scale-105"
                 onClick={obtainLocation}
               >
                 Retry
